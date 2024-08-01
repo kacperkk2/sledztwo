@@ -1,0 +1,48 @@
+
+<div fxLayout="column" fxLayoutAlign="start center" style="height: 100%;">
+
+    <div class="main" fxLayout="column" fxLayoutAlign="center center">
+  
+      <div fxFlexFill fxFlex="95">
+        <mat-grid-list cols="5" rowHeight="fit">
+          <mat-grid-tile
+              class="main-tile"
+              *ngFor="let card of cards"
+              (click)="isSwapMode ? swapCard(card) : markCard(card)">
+
+              <img 
+                class="tile-image"
+                [style.filter]="card.isMarked ? 'brightness(30%)' : 'brightness(100%)'"
+                mat-card-image [src]="card.image" layout-fill>
+
+              <div class="card-label" *ngIf="isLabelMode">
+                {{ card.name }}
+              </div>
+              
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    
+      <div fxFlexFill fxFlex="1"></div>
+      
+      <div class="bottom-nav" fxFlexFill fxFlex="4" fxLayout="row" fxLayoutAlign="space-between center">
+
+        <div>
+          <button mat-flat-button (click)="reloadRandomBoard()"> Losuj </button>
+        </div>
+
+        <div>
+          <button mat-flat-button (click)="switchLabels()"> Labelki </button>
+        </div>
+
+        <div>
+          <button *ngIf="!isSwapMode" mat-flat-button (click)="swapMode()"> Włącz tryb zmiany karty </button>
+          <button *ngIf="isSwapMode" mat-flat-button (click)="swapMode()"> Wyłącz tryb zmiany karty </button>
+        </div>
+      </div>
+    
+    </div>
+    
+    
+  </div>
+  

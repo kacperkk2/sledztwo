@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <p mat-dialog-title> {{ card.name }} </p>
+    <mat-icon>arrow_downward</mat-icon>
+    <p mat-dialog-title> {{ pickedCard ? pickedCard.name : '' }} </p>
+</div>
+<mat-dialog-content>
+    <mat-grid-list cols="1" [gutterSize]="'5px'" rowHeight="40px">
+        <mat-grid-tile 
+            *ngFor="let restCard of restCards" 
+            class="main-tile"
+            [style.background-color]="pickedCard && restCard.code == pickedCard.code ? 'rgb(39, 39, 39)' : 'rgb(77, 77, 77)'"
+            (click)="picked(restCard)">
+          <div class="text"> {{ restCard.name | uppercase }} </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout="row" fxLayoutAlign="center center">
+    <button mat-flat-button [disabled]="!pickedCard" (click)="onSwap()"> Zamień </button>
+</mat-dialog-actions>
