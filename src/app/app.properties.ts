@@ -7,8 +7,8 @@ export const CONFIG = {
   ROWS: 5,
 
   PERSON: [
-    {name: 'RZEŹNIK', image: '/assets/person/rzeznik.png'},
-    {name: 'MALARZ', image: '/assets/person/malarz.png'},
+    {name: 'RZEŹNIK', image: '/sledztwo/assets/person/rzeznik.png'},
+    {name: 'MALARZ', image: 'sledztwo/assets/person/malarz.png'},
     {name: 'BURMISTRZ', image: '/assets/person/burmistrz.png'},
     {name: 'POMOC DOMOWA', image: '/assets/person/pomoc_domowa.png'},
     {name: 'SPRZEDAWCA', image: '/assets/person/sprzedawca.png'},
