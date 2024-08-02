@@ -14,6 +14,7 @@ export class BoardComponent implements OnInit {
   cards: Card[];
   isSwapMode: boolean = false;
   isLabelMode: boolean = false;
+  urlRoot: string = CONFIG.URL_ROOT;
 
   constructor(private route: ActivatedRoute, 
     private router: Router,

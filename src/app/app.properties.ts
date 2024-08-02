@@ -1,14 +1,14 @@
 export const CONFIG = {
 
-  URL_ROOT: "",
+  URL_ROOT: "/sledztwo",
 
   CARD_CODE_LENGTH: 2,
   CARDS_IN_ROW: 5,
   ROWS: 5,
 
   PERSON: [
-    {name: 'RZEŹNIK', image: '/sledztwo/assets/person/rzeznik.png'},
-    {name: 'MALARZ', image: 'sledztwo/assets/person/malarz.png'},
+    {name: 'RZEŹNIK', image: '/assets/person/rzeznik.png'},
+    {name: 'MALARZ', image: '/assets/person/malarz.png'},
     {name: 'BURMISTRZ', image: '/assets/person/burmistrz.png'},
     {name: 'POMOC DOMOWA', image: '/assets/person/pomoc_domowa.png'},
     {name: 'SPRZEDAWCA', image: '/assets/person/sprzedawca.png'},

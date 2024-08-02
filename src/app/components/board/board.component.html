@@ -13,7 +13,7 @@
               <img 
                 class="tile-image"
                 [style.filter]="card.isMarked ? 'brightness(30%)' : 'brightness(100%)'"
-                mat-card-image [src]="card.image" layout-fill>
+                mat-card-image [src]="urlRoot + card.image" layout-fill>
 
               <div class="card-label" *ngIf="isLabelMode">
                 {{ card.name }}
