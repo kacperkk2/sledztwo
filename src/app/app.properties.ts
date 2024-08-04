@@ -6,6 +6,9 @@ export const CONFIG = {
   CARDS_IN_ROW: 5,
   ROWS: 5,
 
+  // todo:
+  // 2. ladniejszy dialog zmiany, bez rozjezdzania bo guzik ucieka pod ekran
+  // 3. guziki ladne na dolne akcje
   PERSON: [
     {name: 'RZEŹNIK', image: '/assets/person/rzeznik.jpeg'},
     {name: 'MALARZ', image: '/assets/person/malarz.jpeg'},

@@ -146,22 +146,25 @@ export class BoardService {
   }
 
   public getRestCards(card: Card): Card[] {
+    let cards: Card[];
     if (card.category == CardCategory.PERSON) {
-      return Array.from(this.cardsPool.personMap.values())
+      cards = Array.from(this.cardsPool.personMap.values());
     }
     else if (card.category == CardCategory.ITEM) {
-      return Array.from(this.cardsPool.itemMap.values())
+      cards = Array.from(this.cardsPool.itemMap.values());
     }
     else if (card.category == CardCategory.MOTIVE) {
-      return Array.from(this.cardsPool.motivesMap.values())
+      cards = Array.from(this.cardsPool.motivesMap.values());
     }
     else if (card.category == CardCategory.PLACE) {
-      return Array.from(this.cardsPool.placeMap.values())
+      cards = Array.from(this.cardsPool.placeMap.values());
     }
     else {
       throw new Error('Invalid card category: ' + card);
     }
+    return cards.sort((a, b) => a.name.localeCompare(b.name));
   }
+  
 
   buildWithCodes(configCards: ConfigCard[], cardCategory: CardCategory): Map<string, Card> {
     const cardsMap = new Map<string, Card>();
