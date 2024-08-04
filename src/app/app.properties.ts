@@ -176,6 +176,6 @@ MOTIVE: [
     {name: 'NIETRZEŹWOŚĆ', image: '/assets/motive/nietrzezwosc.jpeg'},
     {name: 'POPĘD SEKSUALNY', image: '/assets/motive/poped_seksualny.jpeg'},
     {name: 'PROBLEMY PSYCHICZNE', image: '/assets/motive/problemy_psychiczne.jpeg'},
-    {name: 'CHCIWOŚĆ', image: '/assets/motive/chciwość.jpeg'},
+    {name: 'CHCIWOŚĆ', image: '/assets/motive/chciwosc.jpeg'},
   ],
 }
