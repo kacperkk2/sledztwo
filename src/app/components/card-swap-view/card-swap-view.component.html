@@ -1,0 +1,31 @@
+<div class="swap-view">
+
+  <!-- Wiersz z kartami + ikona swap -->
+  <div class="row-section">
+    <div class="card-row">
+      <div class="row-card-wrapper" *ngFor="let card of rowCards" (click)="selectRowCard(card)">
+        <app-card
+          [card]="card"
+          [showLabel]="showLabels"
+          [isSelected]="card.code === selectedCard.code">
+        </app-card>
+        <div class="swap-indicator" *ngIf="card.code === selectedCard.code">
+          <mat-icon>swap_vert</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollowalna siatka dostępnych kart -->
+  <div class="available-section">
+    <div class="available-grid">
+      <div
+          class="available-tile"
+          *ngFor="let card of availableCards"
+          (click)="pickReplacement(card)">
+        <app-card [card]="card" [showLabel]="showLabels"></app-card>
+      </div>
+    </div>
+  </div>
+
+</div>

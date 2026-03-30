@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BoardService } from '../../services/board/board.service';
 import { CONFIG } from '../../app.properties';
-import { MatDialog } from '@angular/material/dialog';
-import { SwapCardDialog } from 'src/app/dialogs/swap-card-dialog/swap-card-dialog';
 
 @Component({
   selector: 'app-board',
@@ -14,17 +12,16 @@ export class BoardComponent implements OnInit {
   cards: Card[];
   isSwapMode: boolean = false;
   isLabelMode: boolean = false;
+  swapViewCard: Card | null = null;
   urlRoot: string = CONFIG.URL_ROOT;
 
-  constructor(private route: ActivatedRoute, 
+  constructor(private route: ActivatedRoute,
     private router: Router,
-    private boardService: BoardService,
-    public dialog: MatDialog) { }
+    private boardService: BoardService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const code = params['code'];
-      // console.log(code)
       if (code) {
         this.cards = this.boardService.buildBoardFromCode(code);
       }
@@ -34,12 +31,6 @@ export class BoardComponent implements OnInit {
         this.router.navigate(['/', code]);
       }
     });
-    // this.share();
-  }
-
-  share() {
-    const url = location.origin + CONFIG.URL_ROOT + "/" + this.boardService.getBoardCode();
-    console.log(url)
   }
 
   reloadRandomBoard() {
@@ -48,15 +39,18 @@ export class BoardComponent implements OnInit {
     this.router.navigate(['/', code]);
   }
 
-  swapCard(card: Card) {
-    const dialogRef = this.dialog.open(SwapCardDialog, {data: card, width: '90%'});
-    dialogRef.afterClosed().subscribe(pickedCard => {
-      if (pickedCard) {
-        this.boardService.swapCards(card, pickedCard);
-        const code: string = this.boardService.getBoardCode();
-        this.router.navigate(['/', code]);
-      }
-    });
+  enterSwapView(card: Card) {
+    this.swapViewCard = card;
+  }
+
+  onSwapped() {
+    this.cards = this.boardService.getAllCards();
+  }
+
+  onBack() {
+    this.swapViewCard = null;
+    const code = this.boardService.getBoardCode();
+    this.router.navigate(['/', code]);
   }
 
   markCard(card: Card) {
@@ -67,12 +61,8 @@ export class BoardComponent implements OnInit {
     this.isSwapMode = !this.isSwapMode;
   }
 
-  getCardColor(card: Card) {
-    return card.isMarked ? 'RED' : ''
-  }
-
   switchLabels() {
-    this.isLabelMode = !this.isLabelMode
+    this.isLabelMode = !this.isLabelMode;
   }
 }
 
@@ -100,4 +90,3 @@ export interface Board {
   victims: Card[];
   motives: Card[];
 }
-

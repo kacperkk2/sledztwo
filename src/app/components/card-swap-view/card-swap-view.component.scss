@@ -1,0 +1,58 @@
+.swap-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.row-section {
+  flex-shrink: 0;
+  padding: 8px 0 4px;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.row-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  cursor: pointer;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.swap-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  color: #ffd740;
+
+  mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.available-section {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.available-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  padding: 4px;
+}
+
+.available-tile {
+  cursor: pointer;
+}

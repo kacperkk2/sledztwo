@@ -145,6 +145,21 @@ export class BoardService {
     ]
   }
 
+  public getRowForCard(card: Card): Card[] {
+    if (card.category === CardCategory.PERSON) {
+      if (this.currentBoard.causers.some(c => c.code === card.code)) {
+        return [...this.currentBoard.causers];
+      }
+      return [...this.currentBoard.victims];
+    } else if (card.category === CardCategory.ITEM) {
+      return [...this.currentBoard.items];
+    } else if (card.category === CardCategory.PLACE) {
+      return [...this.currentBoard.places];
+    } else {
+      return [...this.currentBoard.motives];
+    }
+  }
+
   public getRestCards(card: Card): Card[] {
     let cards: Card[];
     if (card.category == CardCategory.PERSON) {

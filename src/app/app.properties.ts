@@ -1,5 +1,6 @@
 export const CONFIG = {
 
+  // todo dodac mozliwosc zmiany na kazda karte, nawet jesli jest w tym samym wierszu, zeby zmienilo je miejscami wtedy
   URL_ROOT: "/sledztwo",
 
   CARD_CODE_LENGTH: 2,

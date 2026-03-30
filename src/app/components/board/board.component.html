@@ -1,24 +1,18 @@
 
 <div fxLayout="column" fxLayoutAlign="start center" style="height: 100%;">
 
-    <div class="main" fxLayout="column" fxLayoutAlign="center center">
-  
+  <div class="main" fxLayout="column" fxLayoutAlign="center center">
+
+    <!-- WIDOK GŁÓWNY -->
+    <ng-container *ngIf="!swapViewCard">
+
       <div fxFlexFill fxFlex="94">
         <mat-grid-list cols="5" rowHeight="fit">
           <mat-grid-tile
               class="main-tile"
               *ngFor="let card of cards"
-              (click)="isSwapMode ? swapCard(card) : markCard(card)">
-
-              <img
-                class="tile-image"
-                [style.filter]="card.isMarked ? 'brightness(30%)' : 'brightness(100%)'"
-                mat-card-image [src]="urlRoot + card.image" layout-fill>
-
-              <div class="card-label" *ngIf="isLabelMode">
-                {{ card.name }}
-              </div>
-
+              (click)="isSwapMode ? enterSwapView(card) : markCard(card)">
+            <app-card [card]="card" [showLabel]="isLabelMode" [isMarked]="card.isMarked" [fillHeight]="true"></app-card>
           </mat-grid-tile>
         </mat-grid-list>
       </div>
@@ -41,9 +35,31 @@
         </div>
 
       </div>
-    
-    </div>
-    
-    
+
+    </ng-container>
+
+    <!-- WIDOK EDYCJI WIERSZA -->
+    <ng-container *ngIf="swapViewCard">
+
+      <div fxFlexFill fxFlex="94">
+        <app-card-swap-view
+          [initialCard]="swapViewCard"
+          [showLabels]="isLabelMode"
+          (swapped)="onSwapped()">
+        </app-card-swap-view>
+      </div>
+
+      <div class="bottom-nav" fxFlexFill fxFlex="6" fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-flat-button (click)="onBack()">
+          <mat-icon>arrow_back</mat-icon> Powrót
+        </button>
+        <button mat-flat-button [color]="isLabelMode ? 'accent' : ''" (click)="switchLabels()">
+          <mat-icon>text_fields</mat-icon> Labelki
+        </button>
+      </div>
+
+    </ng-container>
+
   </div>
-  
+
+</div>
