@@ -6,9 +6,6 @@ export const CONFIG = {
   CARDS_IN_ROW: 5,
   ROWS: 5,
 
-  // todo:
-  // 2. ladniejszy dialog zmiany, bez rozjezdzania bo guzik ucieka pod ekran
-  // 3. guziki ladne na dolne akcje
   PERSON: [
     {name: 'RZEŹNIK', image: '/assets/person/rzeznik.jpeg'},
     {name: 'MALARZ', image: '/assets/person/malarz.jpeg'},
@@ -111,6 +108,31 @@ PLACE: [
     {name: 'LAS', image: '/assets/place/las.jpeg'},
     {name: 'METRO', image: '/assets/place/metro.jpeg'},
     {name: 'UCZELNIA', image: '/assets/place/uczelnia.jpeg'},
+    {name: 'APTEKA', image: '/assets/place/apteka.jpeg'},
+    {name: 'BANK', image: '/assets/place/bank.jpeg'},
+    {name: 'BRZEG RZEKI', image: '/assets/place/brzeg_rzeki.jpeg'},
+    {name: 'GARAŻ', image: '/assets/place/garaz.jpeg'},
+    {name: 'HOTEL', image: '/assets/place/hotel.jpeg'},
+    {name: 'JASKINIA', image: '/assets/place/jaskinia.jpeg'},
+    {name: 'KASYNO', image: '/assets/place/kasyno.jpeg'},
+    {name: 'KAWIARNIA', image: '/assets/place/kawiarnia.jpeg'},
+    {name: 'KOMISARIAT POLICJI', image: '/assets/place/komisariat_policji.jpeg'},
+    {name: 'KOŚCIÓŁ', image: '/assets/place/kosciol.jpeg'},
+    {name: 'ŁAZIENKA', image: '/assets/place/lazienka.jpeg'},
+    {name: 'LOTNISKO', image: '/assets/place/lotnisko.jpeg'},
+    {name: 'MUZEUM', image: '/assets/place/muzeum.jpeg'},
+    {name: 'PARKING PODZIEMNY', image: '/assets/place/parking_podziemny.jpeg'},
+    {name: 'PIWNICA', image: '/assets/place/piwnica.jpeg'},
+    {name: 'POLE KUKURYDZY', image: '/assets/place/pole_kukurydzy.jpeg'},
+    {name: 'PORT', image: '/assets/place/port.jpeg'},
+    {name: 'SALA OPERACYJNA', image: '/assets/place/sala_operacyjna.jpeg'},
+    {name: 'SIŁOWNIA', image: '/assets/place/silownia.jpeg'},
+    {name: 'SKLEP CAŁODOBOWY', image: '/assets/place/sklep_calodobowy.jpeg'},
+    {name: 'STRYCH', image: '/assets/place/strych.jpeg'},
+    {name: 'SYPIALNIA', image: '/assets/place/sypialnia.jpeg'},
+    {name: 'SZLAK GÓRSKI', image: '/assets/place/szlak_gorski.jpeg'},
+    {name: 'SZPITAL', image: '/assets/place/szpital.jpeg'},
+    {name: 'WIĘZIENIE', image: '/assets/place/wiezienie.jpeg'},
   ],
 
 ITEM: [
@@ -147,6 +169,51 @@ ITEM: [
     {name: 'PĘDZEL', image: '/assets/item/pedzel.jpeg'},
     {name: 'SIEKIERA', image: '/assets/item/siekiera.jpeg'},
     {name: 'SZNUR', image: '/assets/item/sznur.jpeg'},
+    {name: 'BENZYNA W BUTELCE', image: '/assets/item/benzyna_w_butelce.jpeg'},
+    {name: 'BRZYTWA', image: '/assets/item/brzytwa.jpeg'},
+    {name: 'BUMERANG', image: '/assets/item/bumerang.jpeg'},
+    {name: 'BUTELKA', image: '/assets/item/butelka.jpeg'},
+    {name: 'CEGŁA', image: '/assets/item/cegla.jpeg'},
+    {name: 'CHEMIKALIA', image: '/assets/item/chemikalia.jpeg'},
+    {name: 'CHLOROFORM', image: '/assets/item/chloroform.jpeg'},
+    {name: 'FIGURKA', image: '/assets/item/figurka.jpeg'},
+    {name: 'GAŚNICA', image: '/assets/item/gasnica.jpeg'},
+    {name: 'GAZ PIEPRZOWY', image: '/assets/item/gaz_pieprzowy.jpeg'},
+    {name: 'GRZYBY', image: '/assets/item/grzyby.jpeg'},
+    {name: 'GUMOWA PAŁKA', image: '/assets/item/gumowa_palka.jpeg'},
+    {name: 'HANTEL', image: '/assets/item/hantel.jpeg'},
+    {name: 'KABEL', image: '/assets/item/kabel.jpeg'},
+    {name: 'KAJDANKI', image: '/assets/item/kajdanki.jpeg'},
+    {name: 'KANISTER Z BENZYNĄ', image: '/assets/item/kanister_z_benzyna.jpeg'},
+    {name: 'KASTET', image: '/assets/item/kastet.jpeg'},
+    {name: 'KIJ GOLFOWY', image: '/assets/item/kij_golfowy.jpeg'},
+    {name: 'KLUCZ DO KÓŁ', image: '/assets/item/klucz_do_kol.jpeg'},
+    {name: 'KLUCZ FRANCUSKI', image: '/assets/item/klucz_francuski.jpeg'},
+    {name: 'KORKOCIĄG', image: '/assets/item/korkociag.jpeg'},
+    {name: 'KRAWAT', image: '/assets/item/krawat.jpeg'},
+    {name: 'KULA BILARDOWA', image: '/assets/item/kula_bilardowa.jpeg'},
+    {name: 'KUSZA', image: '/assets/item/kusza.jpeg'},
+    {name: 'ŁAŃCUCH', image: '/assets/item/lancuch.jpeg'},
+    {name: 'MACZETA', image: '/assets/item/maczeta.jpeg'},
+    {name: 'METALOWA RURA', image: '/assets/item/metalowa_rura.jpeg'},
+    {name: 'ODCISK PALCA', image: '/assets/item/odcisk_palca.jpeg'},
+    {name: 'OPASKA UCISKOWA', image: '/assets/item/opaska_uciskowa.jpeg'},
+    {name: 'PARASOLKA', image: '/assets/item/parasolka.jpeg'},
+    {name: 'PATELNIA', image: '/assets/item/patelnia.jpeg'},
+    {name: 'PENDRIVE', image: '/assets/item/pendrive.jpeg'},
+    {name: 'PODUSZKA', image: '/assets/item/poduszka.jpeg'},
+    {name: 'RÓŻANIEC', image: '/assets/item/rozaniec.jpeg'},
+    {name: 'SEKATOR', image: '/assets/item/sekator.jpeg'},
+    {name: 'SKALPEL', image: '/assets/item/skalpel.jpeg'},
+    {name: 'ŚLAD BUTA', image: '/assets/item/slad_buta.jpeg'},
+    {name: 'ŚWIECZNIK', image: '/assets/item/swiecznik.jpeg'},
+    {name: 'SZPIKULEC DO LODU', image: '/assets/item/szpikulec_do_lodu.jpeg'},
+    {name: 'WIDŁY', image: '/assets/item/widly.jpeg'},
+    {name: 'ZAPALNICZKA', image: '/assets/item/zapalniczka.jpeg'},
+    {name: 'ZDJĘCIE', image: '/assets/item/zdjecie.jpeg'},
+    {name: 'ZEGAREK', image: '/assets/item/zegarek.jpeg'},
+    {name: 'ŻELAZKO', image: '/assets/item/zelazko.jpeg'},
+    {name: 'ZSZYWACZ', image: '/assets/item/zszywacz.jpeg'},
   ],
 
 MOTIVE: [
@@ -209,3 +276,14 @@ MOTIVE: [
     {name: 'WSTYD', image: '/assets/motive/wstyd.jpeg'},
   ],
 }
+
+// todo:
+// SAUNA
+// - JACHT                                                                                                                                                                                    
+//   - ZAKŁAD POGRZEBOWY                                                                                                                                                                        
+//   - SZKLARNIA                                                                                                                                                                                
+//   - FABRYKA                                                                                                                                                                       
+//   - KANAŁY                                                                                                                                                                                   
+//   - BALKON            
+//   - WINIARNIA
+//   - TAKSÓWKA
