@@ -35,7 +35,8 @@ $sledztwo-theme: mat.define-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100dvh; overflow: hidden; }
+html { height: 100%; overflow: hidden; }
+body { height: 100svh; overflow-y: auto; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
