@@ -3,14 +3,14 @@
 
     <div class="main" fxLayout="column" fxLayoutAlign="center center">
   
-      <div fxFlexFill fxFlex="95">
+      <div fxFlexFill fxFlex="94">
         <mat-grid-list cols="5" rowHeight="fit">
           <mat-grid-tile
               class="main-tile"
               *ngFor="let card of cards"
               (click)="isSwapMode ? swapCard(card) : markCard(card)">
 
-              <img 
+              <img
                 class="tile-image"
                 [style.filter]="card.isMarked ? 'brightness(30%)' : 'brightness(100%)'"
                 mat-card-image [src]="urlRoot + card.image" layout-fill>
@@ -18,27 +18,28 @@
               <div class="card-label" *ngIf="isLabelMode">
                 {{ card.name }}
               </div>
-              
+
           </mat-grid-tile>
         </mat-grid-list>
       </div>
-    
-      <div fxFlexFill fxFlex="1"></div>
-      
-      <div class="bottom-nav" fxFlexFill fxFlex="4" fxLayout="row" fxLayoutAlign="space-between center">
 
-        <div>
-          <button mat-flat-button (click)="reloadRandomBoard()"> Losuj </button>
+      <div class="bottom-nav" fxFlexFill fxFlex="6" fxLayout="row" fxLayoutAlign="space-between center">
+
+        <div fxLayout="row" fxLayoutGap="8px">
+          <button mat-flat-button (click)="reloadRandomBoard()">
+            <mat-icon>shuffle</mat-icon> Losuj
+          </button>
+          <button mat-flat-button [color]="isSwapMode ? 'accent' : ''" (click)="swapMode()">
+            <mat-icon>swap_horiz</mat-icon> Zmiana karty
+          </button>
         </div>
 
         <div>
-          <button mat-flat-button (click)="switchLabels()"> Labelki </button>
+          <button mat-flat-button [color]="isLabelMode ? 'accent' : ''" (click)="switchLabels()">
+            <mat-icon>text_fields</mat-icon> Labelki
+          </button>
         </div>
 
-        <div>
-          <button *ngIf="!isSwapMode" mat-flat-button (click)="swapMode()"> Włącz tryb zmiany karty </button>
-          <button *ngIf="isSwapMode" mat-flat-button (click)="swapMode()"> Wyłącz tryb zmiany karty </button>
-        </div>
       </div>
     
     </div>

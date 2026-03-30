@@ -13,7 +13,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $sledztwo-primary: mat.define-palette(mat.$indigo-palette);
-$sledztwo-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$sledztwo-accent: mat.define-palette(mat.$yellow-palette, A700, A400, A200);
 
 // The warn palette is optional (defaults to red).
 $sledztwo-warn: mat.define-palette(mat.$red-palette);
@@ -35,11 +35,11 @@ $sledztwo-theme: mat.define-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100vh; }
-body { 
-  margin: 0; 
+html, body { height: 100vh; overflow: hidden; }
+body {
+  margin: 0;
   font-family: 'Lato', sans-serif;
-  font-weight: 400; 
+  font-weight: 400;
   background-color: #282828;
 }
 
