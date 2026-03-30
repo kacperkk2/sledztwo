@@ -12,6 +12,7 @@ export class BoardComponent implements OnInit {
   cards: Card[];
   isSwapMode: boolean = false;
   isLabelMode: boolean = false;
+  zoom: number = 1;
   swapViewCard: Card | null = null;
   urlRoot: string = CONFIG.URL_ROOT;
 
@@ -63,6 +64,14 @@ export class BoardComponent implements OnInit {
 
   switchLabels() {
     this.isLabelMode = !this.isLabelMode;
+  }
+
+  zoomIn() {
+    this.zoom = Math.min(1.2, +(this.zoom + 0.05).toFixed(2));
+  }
+
+  zoomOut() {
+    this.zoom = Math.max(0.8, +(this.zoom - 0.05).toFixed(2));
   }
 }
 

@@ -1,4 +1,4 @@
 <div class="card-container" [class.selected]="isSelected">
-  <img [src]="urlRoot + card.image" [style.filter]="isMarked ? 'brightness(30%)' : 'brightness(100%)'" />
+  <img [src]="urlRoot + card.image" [style.filter]="isMarked ? 'brightness(30%)' : 'brightness(100%)'" [style.transform]="'scale(' + zoom + ')'" />
   <div class="card-label" *ngIf="showLabel">{{ card.name }}</div>
 </div>

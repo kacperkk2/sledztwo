@@ -12,7 +12,7 @@
               class="main-tile"
               *ngFor="let card of cards"
               (click)="isSwapMode ? enterSwapView(card) : markCard(card)">
-            <app-card [card]="card" [showLabel]="isLabelMode" [isMarked]="card.isMarked" [fillHeight]="true"></app-card>
+            <app-card [card]="card" [showLabel]="isLabelMode" [isMarked]="card.isMarked" [fillHeight]="true" [zoom]="zoom"></app-card>
           </mat-grid-tile>
         </mat-grid-list>
       </div>
@@ -28,9 +28,15 @@
           </button>
         </div>
 
-        <div>
+        <div fxLayout="row" fxLayoutGap="8px">
+          <button mat-flat-button (click)="zoomOut()" [disabled]="zoom <= 0.8">
+            <mat-icon>zoom_out</mat-icon>
+          </button>
+          <button mat-flat-button (click)="zoomIn()" [disabled]="zoom >= 1.2">
+            <mat-icon>zoom_in</mat-icon>
+          </button>
           <button mat-flat-button [color]="isLabelMode ? 'accent' : ''" (click)="switchLabels()">
-            <mat-icon>text_fields</mat-icon> Labelki
+            <mat-icon>text_fields</mat-icon>
           </button>
         </div>
 
@@ -54,7 +60,7 @@
           <mat-icon>arrow_back</mat-icon> Powrót
         </button>
         <button mat-flat-button [color]="isLabelMode ? 'accent' : ''" (click)="switchLabels()">
-          <mat-icon>text_fields</mat-icon> Labelki
+          <mat-icon>text_fields</mat-icon>
         </button>
       </div>
 

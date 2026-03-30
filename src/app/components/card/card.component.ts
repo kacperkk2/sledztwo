@@ -13,6 +13,7 @@ export class CardComponent {
   @Input() isMarked: boolean = false;
   @Input() isSelected: boolean = false;
   @Input() fillHeight: boolean = false;
+  @Input() zoom: number = 1;
 
   @HostBinding('style.height') get hostHeight() { return this.fillHeight ? '100%' : 'auto'; }
 
