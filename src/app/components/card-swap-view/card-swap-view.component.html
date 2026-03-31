@@ -7,7 +7,9 @@
         <app-card
           [card]="card"
           [showLabel]="showLabels"
-          [isSelected]="card.code === selectedCard.code">
+          [isSelected]="card.code === selectedCard.code"
+          [switchMark]="card.code === selectedCard.code"
+          [zoom]="zoom">
         </app-card>
         <div class="swap-indicator" *ngIf="card.code === selectedCard.code">
           <mat-icon>swap_vert</mat-icon>
@@ -23,7 +25,7 @@
           class="available-tile"
           *ngFor="let card of availableCards"
           (click)="pickReplacement(card)">
-        <app-card [card]="card" [showLabel]="showLabels"></app-card>
+        <app-card [card]="card" [showLabel]="showLabels" [zoom]="zoom"></app-card>
       </div>
     </div>
   </div>

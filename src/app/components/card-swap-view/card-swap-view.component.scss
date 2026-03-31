@@ -8,7 +8,7 @@
 
 .row-section {
   flex-shrink: 0;
-  padding: 8px 0 4px;
+  padding: 1px 0;
 }
 
 .card-row {
@@ -23,7 +23,7 @@
   align-items: center;
   width: 20%;
   cursor: pointer;
-  padding: 0 2px;
+  padding: 0 1px;
   box-sizing: border-box;
 }
 
@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   margin-top: 2px;
-  color: #ffd740;
+  color: #ffd600;
 
   mat-icon {
     font-size: 20px;
@@ -49,8 +49,7 @@
 .available-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-  padding: 4px;
+  gap: 1px;
 }
 
 .available-tile {

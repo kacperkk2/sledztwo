@@ -13,6 +13,8 @@ export class BoardComponent implements OnInit {
   isSwapMode: boolean = false;
   isLabelMode: boolean = false;
   zoom: number = 1;
+
+  private static readonly LS_KEY = 'kacperkk2.sledztwo';
   swapViewCard: Card | null = null;
   urlRoot: string = CONFIG.URL_ROOT;
 
@@ -21,6 +23,10 @@ export class BoardComponent implements OnInit {
     private boardService: BoardService) { }
 
   ngOnInit() {
+    const settings = JSON.parse(localStorage.getItem(BoardComponent.LS_KEY) ?? '{}');
+    this.zoom = typeof settings.zoom === 'number' ? settings.zoom : 1;
+    this.isLabelMode = typeof settings.labels === 'boolean' ? settings.labels : false;
+
     this.route.params.subscribe(params => {
       const code = params['code'];
       if (code) {
@@ -64,14 +70,21 @@ export class BoardComponent implements OnInit {
 
   switchLabels() {
     this.isLabelMode = !this.isLabelMode;
+    this.saveSettings();
   }
 
   zoomIn() {
     this.zoom = Math.min(1.2, +(this.zoom + 0.05).toFixed(2));
+    this.saveSettings();
   }
 
   zoomOut() {
-    this.zoom = Math.max(0.8, +(this.zoom - 0.05).toFixed(2));
+    this.zoom = Math.max(0.9, +(this.zoom - 0.05).toFixed(2));
+    this.saveSettings();
+  }
+
+  private saveSettings() {
+    localStorage.setItem(BoardComponent.LS_KEY, JSON.stringify({ zoom: this.zoom, labels: this.isLabelMode }));
   }
 }
 

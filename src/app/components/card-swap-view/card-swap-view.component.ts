@@ -11,6 +11,7 @@ import { CONFIG } from '../../app.properties';
 export class CardSwapViewComponent implements OnInit {
   @Input() initialCard: Card;
   @Input() showLabels: boolean = false;
+  @Input() zoom: number = 1;
   @Output() swapped = new EventEmitter<void>();
 
   rowCards: Card[] = [];
