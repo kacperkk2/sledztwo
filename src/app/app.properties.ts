@@ -287,3 +287,4 @@ MOTIVE: [
 //   - BALKON            
 //   - WINIARNIA
 //   - TAKSÓWKA
+//   - BASEN
