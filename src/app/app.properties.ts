@@ -1,6 +1,6 @@
 export const CONFIG = {
 
-  URL_ROOT: "",
+  URL_ROOT: "/sledztwo",
 
   CARD_CODE_LENGTH: 2,
   CARDS_IN_ROW: 5,
