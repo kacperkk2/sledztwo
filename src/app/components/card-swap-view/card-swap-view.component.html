@@ -25,7 +25,7 @@
           class="available-tile"
           *ngFor="let card of availableCards"
           (click)="pickReplacement(card)">
-        <app-card [card]="card" [showLabel]="showLabels" [zoom]="zoom"></app-card>
+        <app-card [card]="card" [showLabel]="showLabels" [showBorder]="true" [zoom]="zoom"></app-card>
       </div>
     </div>
   </div>

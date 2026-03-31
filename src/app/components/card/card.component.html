@@ -1,4 +1,4 @@
-<div class="card-container" [class.selected]="isSelected" [class.switch-mark]="switchMark">
+<div class="card-container" [class.selected]="isSelected" [class.switch-mark]="switchMark" [class.show-border]="showBorder">
   <img [src]="urlRoot + card.image" [style.filter]="isMarked ? 'brightness(30%)' : 'brightness(100%)'" [style.transform]="'scale(' + zoom + ')'" />
   <div class="card-label" *ngIf="showLabel" [class.marked]="isMarked">{{ card.name }}</div>
 </div>

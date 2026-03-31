@@ -13,6 +13,7 @@ export class CardComponent {
   @Input() isMarked: boolean = false;
   @Input() isSelected: boolean = false;
   @Input() switchMark: boolean = false;
+  @Input() showBorder: boolean = false;
   @Input() zoom: number = 1;
 
   urlRoot: string = CONFIG.URL_ROOT;
