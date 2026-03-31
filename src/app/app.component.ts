@@ -12,23 +12,6 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  ngOnInit(): void {
-    const allCards = [
-      ...CONFIG.PERSON, ...CONFIG.PLACE,
-      ...CONFIG.ITEM, ...CONFIG.MOTIVE
-    ];
-
-    const preload = () => allCards.forEach(card => {
-      const img = new Image();
-      img.src = CONFIG.URL_ROOT + card.image;
-    });
-
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(preload);
-    } else {
-      setTimeout(preload, 2000);
-    }
-  }
 }
