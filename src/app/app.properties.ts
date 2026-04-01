@@ -13,7 +13,7 @@ export const CONFIG = {
     {name: 'BEZDOMNY', image: '/assets/compressed/person/bezdomny.jpeg'},
     {name: 'BIZNESMEN', image: '/assets/compressed/person/biznesmen.jpeg'},
     {name: 'BOGATA CIOCIA', image: '/assets/compressed/person/bogata_ciocia.jpeg'},
-    {name: 'BYŁY ŻOŁNIERZ', image: '/assets/compressed/person/byli_zolnierz.jpeg'},
+    {name: 'BYŁY ŻOŁNIERZ', image: '/assets/compressed/person/byly_zolnierz.jpeg'},
     {name: 'DENTYSTA', image: '/assets/compressed/person/dentysta.jpeg'},
     {name: 'DETEKTYW', image: '/assets/compressed/person/detektyw.jpeg'},
     {name: 'DIETETYCZKA', image: '/assets/compressed/person/dietetyczka.jpeg'},
