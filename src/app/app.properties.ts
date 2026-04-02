@@ -129,7 +129,7 @@ export const CONFIG = {
     {name: 'POLE KUKURYDZY', image: '/assets/compressed/place/pole_kukurydzy.jpeg'},
     {name: 'PORT', image: '/assets/compressed/place/port.jpeg'},
     {name: 'POSTÓJ TAKSÓWEK', image: '/assets/compressed/place/postoj_taksowek.jpeg'},
-    {name: 'PRZEBIERALNIA NA SIŁOWNI', image: '/assets/compressed/place/przebieralnia_na_silowni.jpeg'},
+    {name: 'PRZEBIERALNIA', image: '/assets/compressed/place/przebieralnia.jpeg'},
     {name: 'PRZYSTANEK AUTOBUSOWY', image: '/assets/compressed/place/przystanek_autobusowy.jpeg'},
     {name: 'RESTAURACJA', image: '/assets/compressed/place/restauracja.jpeg'},
     {name: 'RÓW', image: '/assets/compressed/place/row.jpeg'},
