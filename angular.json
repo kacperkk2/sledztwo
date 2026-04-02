@@ -25,6 +25,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/icon.png",
+              "src/manifest.webmanifest",
               {
                 "glob": "**/*",
                 "input": "src/assets/compressed",

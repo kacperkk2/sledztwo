@@ -1,0 +1,19 @@
+{
+  "name": "Śledztwo",
+  "short_name": "Śledztwo",
+  "description": "Gra planszowa — tablica dochodzeniowa",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#282828",
+  "theme_color": "#282828",
+  "start_url": ".",
+  "scope": ".",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
