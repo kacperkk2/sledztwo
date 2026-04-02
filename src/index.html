@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Śledztwo</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="icon.png">
   <link rel="shortcut icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
@@ -19,14 +19,6 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<script>
-  // Stable viewport height — iOS dvh can shift between renders in standalone mode
-  function setAppHeight() {
-    document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
-  }
-  window.addEventListener('resize', setAppHeight);
-  setAppHeight();
-</script>
 <body>
   <app-root></app-root>
 </body>
