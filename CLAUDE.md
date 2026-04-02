@@ -48,7 +48,24 @@ The board has 5 rows, each from a different pool defined in `app.properties.ts`:
 - **ITEM** (~32 cards) — weapons/evidence
 - **MOTIVE** (~30 cards) — criminal motives
 
-Cards have `{ name: string, image: string }` shape. Images live under `src/assets/{person,place,item,motive}/`.
+Cards have `{ name: string, image: string }` shape. Images are served from `src/assets/compressed/{person,place,item,motive}/`.
+
+### Asset workflow
+
+Images are stored in two places:
+
+- **`src/assets/original/{category}/`** — full-resolution source files; this is where cards are added or replaced
+- **`src/assets/compressed/{category}/`** — optimized versions actually served by the app (400px wide, ~25-35KB JPEG)
+
+**When adding or updating card images, always edit `original/` first, then generate the compressed copy:**
+
+```bash
+convert src/assets/original/{category}/nazwa.jpeg \
+  -resize 400x -quality 55 -sampling-factor 4:2:0 \
+  src/assets/compressed/{category}/nazwa.jpeg
+```
+
+Never edit `compressed/` directly — it is always derived from `original/`.
 
 ### Board state sharing
 
